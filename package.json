@@ -1,17 +1,21 @@
 {
-  "name": "sorts",
-  "version": "1.0.1",
-  "description": "Sorting algorithms, for array.sort()",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "keywords": [
-    "sort",
-    "array",
-    "sorting",
-    "algorithms"
-  ],
-  "author": "Mike MacCana <mike.maccana@gmail.com>",
-  "license": "MIT"
+	"name": "sorts",
+	"version": "1.0.2",
+	"description": "Sorting algorithms, for array.sort()",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha"
+	},
+	"keywords": [
+		"sort",
+		"array",
+		"sorting",
+		"algorithms"
+	],
+	"repository" : {
+		"type" : "git",
+		"url" : "https://github.com/mikemaccana/sorts.git"
+	},
+	"author": "Mike MacCana <mike.maccana@gmail.com>",
+	"license": "MIT"
 }
