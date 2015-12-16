@@ -32,7 +32,7 @@ Just:
 ## byNumber(keyName)
 ## numeric(keyName)
 
-	var ages = [8, 20, 21]
+	var ages = [21, 8, 20]
 
 Just:
 
@@ -46,12 +46,12 @@ Sort an array of objects by a specified key. `sortFunction` can be any of the so
 		name: 'Joe',
 		age: 35,
 	}, {
-		name: 'Alex'
+		name: 'Alex',
 		age: 28
 	}]
 
 Just:
 
-	customers.sort(sorts.byKey('firstName', 'alphabetical'))
+	customers.sort(sorts.byKey('name', 'alphabetical'))
 
 # Please add more sorts!
