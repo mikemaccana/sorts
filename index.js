@@ -9,7 +9,8 @@ var sorts = {
 
 	alphabetical: function(a,b){
 		return a.localeCompare(b);
-	}}
+	}
+}
 
 
 var byKey = function(property, sortName){
