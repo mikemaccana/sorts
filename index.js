@@ -1,3 +1,9 @@
+var log = console.log.bind(console);
+
+var prototypeOf = function(object){
+	return Object.prototype.toString.call(object).split(' ')[1].slice(0, 6)
+}
+
 var sorts = {
 	byLength: function (a, b) {
 		return a.length - b.length
@@ -8,6 +14,10 @@ var sorts = {
 	},
 
 	alphabetical: function(a,b){
+		if ( prototypeOf(a) !== 'String' ) {
+			log('Warning:', a, 'is not a string')
+			return false;
+		}
 		return a.localeCompare(b);
 	}
 }
