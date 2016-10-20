@@ -1,37 +1,4 @@
 {
-  "_args": [
-    [
-      "sorts@^1.0.0",
-      "/Users/mike/Documents/certsimple"
-    ]
-  ],
-  "_from": "sorts@>=1.0.0 <2.0.0",
-  "_id": "sorts@1.0.3",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/sorts",
-  "_nodeVersion": "4.2.1",
-  "_npmUser": {
-    "email": "mike.maccana@gmail.com",
-    "name": "mikemaccana"
-  },
-  "_npmVersion": "3.5.0",
-  "_phantomChildren": {},
-  "_requested": {
-    "name": "sorts",
-    "raw": "sorts@^1.0.0",
-    "rawSpec": "^1.0.0",
-    "scope": null,
-    "spec": ">=1.0.0 <2.0.0",
-    "type": "range"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_shasum": "777115d24ca85432c1b0b0a04dc2c7780f7ed752",
-  "_shrinkwrap": null,
-  "_spec": "sorts@^1.0.0",
-  "_where": "/Users/mike/Documents/certsimple",
   "author": {
     "email": "mike.maccana@gmail.com",
     "name": "Mike MacCana"
@@ -42,12 +9,6 @@
   "dependencies": {},
   "description": "Sorting algorithms, for array.sort()",
   "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "shasum": "777115d24ca85432c1b0b0a04dc2c7780f7ed752",
-    "tarball": "http://registry.npmjs.org/sorts/-/sorts-1.0.3.tgz"
-  },
-  "gitHead": "067e9006feb11c7f55f2fdaf380a596f59b3e837",
   "homepage": "https://github.com/mikemaccana/sorts#readme",
   "keywords": [
     "algorithms",
@@ -73,5 +34,5 @@
   "scripts": {
     "test": "mocha"
   },
-  "version": "1.0.5"
+  "version": "1.0.6"
 }
