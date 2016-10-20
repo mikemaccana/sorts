@@ -26,7 +26,6 @@
   ],
   "name": "sorts",
   "optionalDependencies": {},
-  "readme": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mikemaccana/sorts.git"
@@ -34,5 +33,5 @@
   "scripts": {
     "test": "mocha"
   },
-  "version": "1.0.6"
+  "version": "1.0.7"
 }
