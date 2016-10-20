@@ -38,6 +38,35 @@ Just:
 
 	ages.sort(sorts.numeric)
 
+## domainName
+
+Sort alphabetically, but include 'www.' immediately after the regular domain name. Eg:
+
+	var domainNames = [
+		'banana.com',
+		'www.banana.com',
+		'peach.com',
+		'pear.com',
+		'www.pear.com',
+		'www.bananameltdown.com',
+		'bananameltdown.com',
+		'www.peach.com'
+	]
+	domainNames.sort(sorts.domainName)
+
+Returns:
+
+	[
+		'banana.com',
+		'www.banana.com',
+		'bananameltdown.com',
+		'www.bananameltdown.com',
+		'peach.com',
+		'www.peach.com',
+		'pear.com',
+		'www.pear.com'
+	]
+
 ## byKey(keyName, sortFunction)
 
 Sort an array of objects by a specified key. `sortFunction` can be any of the sort functions above - `alphabetical` is the default `sortFunction`.

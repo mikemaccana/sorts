@@ -4,6 +4,11 @@ var prototypeOf = function(object){
 	return Object.prototype.toString.call(object).split(' ')[1].slice(0, 6)
 }
 
+var normalizeWww = function(domainName){
+	return domainName.split('www.').reverse()[0]
+}
+
+// These are inside a var as other sorts use them!
 var sorts = {
 	byLength: function (a, b) {
 		return a.length - b.length
@@ -14,14 +19,36 @@ var sorts = {
 	},
 
 	alphabetical: function(a,b){
-		if ( prototypeOf(a) !== 'String' ) {
+		if ( prototypeOf(a) !== 'String' || prototypeOf(b) !== 'String' ) {
 			log('Warning:', a, 'is not a string')
 			return false;
+		}
+		return a.localeCompare(b);
+	},
+
+	domainName: function(a,b){
+		if ( prototypeOf(a) !== 'String' || prototypeOf(b) !== 'String' ) {
+			log('Warning:', a, 'is not a string')
+			return false;
+		}
+		var aWasWww = a.startsWith('www.')
+		a = normalizeWww(a);
+		b = normalizeWww(b);
+		// Eg, we are comparing www.foo.com to foo.com
+		if ( a === b ) {
+			return aWasWww
 		}
 		return a.localeCompare(b);
 	}
 }
 
+var alphabetical = function(a,b){
+	if ( prototypeOf(a) !== 'String' ) {
+		log('Warning:', a, 'is not a string')
+		return false;
+	}
+	return a.localeCompare(b);
+}
 
 var byKey = function(property, sortName){
 	return function(a,b) {
@@ -36,10 +63,10 @@ var byKey = function(property, sortName){
 module.exports = {
 	byLength: sorts.byLength,
 	byNumber: sorts.byNumber,
+	byKey,
+	domainName: sorts.domainName,
 	alphabetical: sorts.alphabetical,
 
 	// Aliases
-	numeric: sorts.byNumber,
-
-	byKey: byKey
+	numeric: sorts.byNumber
 }
