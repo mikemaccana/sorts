@@ -1,6 +1,14 @@
-# Common functions for array.sort()
+# Common functions for array.sort(), to keep your code neat and tidy
 
-Tired of staring at the same array.sort() (also known as [Array.prototype.sort()](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/sort) ) functions over and over again? Use the `sorts` module!
+Tired of staring at the same array.sort() (also known as [Array.prototype.sort()](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/sort) ) functions over and over again?
+
+Worried about stuff like Unicode comparisons?
+
+Need to sort an array of objects by some nested key, using a particular sort function?
+
+Want to do cool stuff like compare domain names, ordering subdomains beneath their parents?
+
+Use the `sorts` module!
 
 ## Using the module
 
@@ -52,15 +60,17 @@ Returns:
 
 ## domainName
 
-Sort alphabetically, but include 'www.' immediately after the regular domain name. Eg:
+Sort alphabetically, but order subdomains beneath their parents, and include 'www.' immediately after the regular domain name. Eg:
 
 	var domainNames = [
 		'banana.com',
 		'www.banana.com',
 		'peach.com',
+		'yolo.swag.banana.com',
 		'pear.com',
 		'www.pear.com',
 		'www.bananameltdown.com',
+		'swag.banana.com',
 		'bananameltdown.com',
 		'www.peach.com'
 	]
@@ -71,6 +81,8 @@ Returns:
 	[
 		'banana.com',
 		'www.banana.com',
+		'swag.banana.com',
+		'yolo.swag.banana.com',
 		'bananameltdown.com',
 		'www.bananameltdown.com',
 		'peach.com',

@@ -59,12 +59,16 @@ suite('Correctly sorts', function(){
 			'www.pear.com',
 			'www.bananameltdown.com',
 			'bananameltdown.com',
-			'www.peach.com'
+			'www.peach.com',
+			'yolo.swag.banana.com',
+			'swag.banana.com'
 		]
 		domainNames.sort(sorts.domainName)
 		var expected = [
 			'banana.com',
 			'www.banana.com',
+			'swag.banana.com',
+			'yolo.swag.banana.com',
 			'bananameltdown.com',
 			'www.bananameltdown.com',
 			'peach.com',

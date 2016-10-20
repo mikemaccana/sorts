@@ -8,6 +8,10 @@ var normalizeWww = function(domainName){
 	return domainName.split('www.').reverse()[0]
 }
 
+var reverseDomainName = function(domainName){
+	return domainName.split('.').reverse().join('.')
+}
+
 // These are inside a var as other sorts use them!
 var sorts = {
 	byLength: function (a, b) {
@@ -38,6 +42,10 @@ var sorts = {
 		if ( a === b ) {
 			return aWasWww
 		}
+
+		// Let's reverse the domain names
+		a = reverseDomainName(a)
+		b = reverseDomainName(b)
 		return a.localeCompare(b);
 	}
 }
