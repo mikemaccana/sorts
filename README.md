@@ -4,7 +4,7 @@ Tired of staring at the same array.sort() (also known as [Array.prototype.sort()
 
 ## Using the module
 
-var sorts = require('sorts')
+	var sorts = require('sorts')
 
 ## alphabetical
 
@@ -18,12 +18,20 @@ Just:
 
 	fruits.sort(sorts.alphabetical)
 
+Returns:
+
+	['coconut', 'mango', 'pineapple']
 
 ## byLength
 
 Given:
 
 	var fruits = ['pineapple', 'mango', 'coconut']
+
+Returns:
+
+	['mango', 'coconut', 'pineapple']
+
 
 Just:
 
@@ -37,6 +45,10 @@ Just:
 Just:
 
 	ages.sort(sorts.numeric)
+
+Returns:
+
+	[8, 20, 21]
 
 ## domainName
 
@@ -82,5 +94,15 @@ Sort an array of objects by a specified key. `sortFunction` can be any of the so
 Just:
 
 	customers.sort(sorts.byKey('name', 'alphabetical'))
+
+Returns:
+
+	[{
+		name: 'Alex',
+		age: 28
+	},{
+		name: 'Joe',
+		age: 35,
+	}]
 
 # Please add more sorts!
