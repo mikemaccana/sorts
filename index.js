@@ -35,12 +35,13 @@ var sorts = {
 			log('Warning:', a, 'is not a string')
 			return false;
 		}
-		var aWasWww = a.startsWith('www.')
+		var aWasWww = a.startsWith('www.');
+		var bWasWww = b.startsWith('www.');
 		a = normalizeWww(a);
 		b = normalizeWww(b);
 		// Eg, we are comparing www.foo.com to foo.com
-		if ( a === b ) {
-			return aWasWww
+		if ( a === b && aWasWww !== bWasWww) {
+			return aWasWww ? 1 : -1;
 		}
 
 		// Let's reverse the domain names
